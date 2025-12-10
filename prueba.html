@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Quiz Abecedario</title>
+<style>
+  .quiz-container {
+    margin-bottom: 2em;
+  }
+  .question {
+    font-weight: bold;
+  }
+  .options img {
+    width: 50px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+  }
+  .options img.correct {
+    border-color: green;
+  }
+</style>
+</head>
+<body>
+
+<h1>Quizzes de Señales</h1>
+<div id="quizzes"></div>
+
+<script>
+  // Función para consumir la API y obtener datos
+  async function fetchQuizzes() {
+    try {
+      // Cambia esta URL al endpoint real de la API
+      const response = await fetch('http://127.0.0.1:8000/api/señas');
+      const data = await response.json();
+
+      mostrarQuizzes(data.data);
+    } catch(error) {
+      console.error('Error al obtener quizzes:', error);
+      document.getElementById('quizzes').textContent = 'No se pudo cargar el contenido.';
+    }
+  }
+
+  // Función para mostrar los quizzes y sus preguntas en el HTML
+  function mostrarQuizzes(quizzes) {
+    const container = document.getElementById('quizzes');
+    container.innerHTML = ''; // Limpia contenido previo
+
+    quizzes.forEach(modulo => {
+      // Crear sección para cada módulo (e.g. Abecedario)
+      const moduloDiv = document.createElement('div');
+      moduloDiv.classList.add('quiz-container');
+
+      const titulo = document.createElement('h2');
+      titulo.textContent = modulo.titulo;
+      moduloDiv.appendChild(titulo);
+
+      modulo.contenido.ejercicios.forEach(ejercicio => {
+        const instrucciones = document.createElement('p');
+        instrucciones.textContent = ejercicio.instrucciones;
+        moduloDiv.appendChild(instrucciones);
+
+        ejercicio.preguntas.forEach(pregunta => {
+          const preguntaDiv = document.createElement('div');
+          preguntaDiv.classList.add('question');
+
+          const enunciado = document.createElement('p');
+          enunciado.textContent = `${pregunta.enunciado}`;
+          preguntaDiv.appendChild(enunciado);
+
+          // Opciones con imágenes
+          const opcionesDiv = document.createElement('div');
+          opcionesDiv.classList.add('options');
+
+          pregunta.opciones.forEach(opcion => {
+            const img = document.createElement('img');
+            img.src = `http://127.0.0.1:8000${opcion.imagen}`;
+            img.alt = `Seña para ${pregunta.letra}`;
+            img.title = opcion.correcta ? 'Correcta' : 'Incorrecta';
+
+            // Opcional: señal visual para cuál es correcta (solo para ejemplo)
+            // Para producción, esto no debería mostrarse directamente
+            if(opcion.correcta) {
+              img.classList.add('correct');
+            }
+
+            opcionesDiv.appendChild(img);
+          });
+
+          preguntaDiv.appendChild(opcionesDiv);
+          moduloDiv.appendChild(preguntaDiv);
+        });
+      });
+
+      container.appendChild(moduloDiv);
+    });
+  }
+
+  // Cargar y mostrar los quizzes al cargar la página
+  fetchQuizzes();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Http\Resources\LeccionResource;
+use App\Models\Leccion;
+use App\Models\Leccione;
+
+class LeccionController extends Controller
+{
+    public function index()
+    {
+        $lecciones = Leccione::all();
+        return LeccionResource::collection($lecciones);
+    }
+
+    public function store(Request $request)
+    {
+        $leccion = Leccione::create($request->all());
+        return new LeccionResource($leccion);
+    }
+
+    public function show(Leccione $leccion)
+    {
+        return new LeccionResource($leccion);
+    }
+
+    public function update(Request $request, Leccione $leccion)
+    {
+        $leccion->update($request->all());
+        return new LeccionResource($leccion);
+    }
+
+    public function destroy(Leccione $leccion)
+    {
+        $leccion->delete();
+        return response()->json(null, 204);
+    }
+}
