@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CategoriaSemantica;
 use App\Http\Resources\CategoriaSemanticaResource;
+use App\Models\CategoriaSemantica;
 use Illuminate\Http\Request;
 
 class CategoriaSemanticaController extends Controller

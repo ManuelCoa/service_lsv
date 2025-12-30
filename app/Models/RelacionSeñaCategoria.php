@@ -10,5 +10,10 @@ class RelacionSeñaCategoria extends Model
     use HasFactory;
 
     protected $primaryKey = 'id_relacion';
+
+    protected $fillable = [
+        'id_seña',
+        'id_categoria',
+    ];
 }
 

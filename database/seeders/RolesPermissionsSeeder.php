@@ -37,10 +37,10 @@ class RolesPermissionsSeeder extends Seeder
         Permission::create(['name' => 'borrar permiso']);
 
         // Crear roles y asignar permisos
-        $admin = Role::create(['name' => 'administrador']);
+        $admin = Role::create(['name' => 'administrador' , 'guard_name' => 'api']);
         $admin->givePermissionTo(Permission::all());
 
-        $estudiante = Role::create(['name' => 'estudiante']);
+        $estudiante = Role::create(['name' => 'estudiante', 'guard_name' => 'api']);
         $estudiante->givePermissionTo(['consultar leccion', 'realizar leccion']);
     }
 }

@@ -16,8 +16,8 @@ class RelacionSeñaCategoriaResource extends JsonResource
     {
         return [
             'id' => $this->id_relacion,
-            'seña' => new SeñaResource($this->seña),
-            'categoria' => new CategoriaSemanticaResource($this->categoria),
+            'seña' => $this->id_seña,
+            'categoria' =>$this->id_categoria,
         ];
     }
 }

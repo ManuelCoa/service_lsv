@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Resources\LeccionResource;
-use App\Models\Leccion;
 use App\Models\Leccione;
 
 class LeccionController extends Controller
@@ -26,15 +25,16 @@ class LeccionController extends Controller
         return new LeccionResource($leccion);
     }
 
-    public function update(Request $request, Leccione $leccion)
+    public function update(Request $request, Leccione $leccione)
     {
-        $leccion->update($request->all());
-        return new LeccionResource($leccion);
+        $leccione->update($request->all());
+
+        return new LeccionResource($leccione);
     }
 
-    public function destroy(Leccione $leccion)
+    public function destroy(Leccione $leccione)
     {
-        $leccion->delete();
+        $leccione->delete();
         return response()->json(null, 204);
     }
 }

@@ -3,10 +3,17 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Leccione extends Model
 {
-    protected $fillable = ['titulo', 'id_nivel', 'contenido'];
+    use HasFactory;
+
+    protected $primaryKey = 'id';
+    protected $fillable = [
+        'titulo', 
+        'id_nivel'
+    ];
 
     protected $casts=['contenido'=>'array'];
     public function nivel()

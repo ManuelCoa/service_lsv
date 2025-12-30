@@ -13,7 +13,7 @@ class SeñaResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => $this->id_seña,
+            'id' => $this->id_lección,
             'nombre' => $this->nombre,
             'descripcion' => $this->descripcion,
             'url_img' => $this->url_img,

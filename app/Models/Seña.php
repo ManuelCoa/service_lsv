@@ -10,6 +10,12 @@ class Seña extends Model
     use HasFactory;
 
     protected $primaryKey = 'id_seña';
+    protected $fillable = [
+        'id_leccion',
+        'nombre',
+        'descripcion',
+        'url_img',
+    ];
 
     public function categoriaSemantica()
     {

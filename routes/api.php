@@ -81,10 +81,10 @@ Route::middleware(['auth:api'])->group(function () {
 
 
     // Rutas para gestionar categorías semánticas
-    Route::apiResource('categorias-semanticas', CategoriaSemanticaController::class)->middleware(['role:administrador']);
+    Route::apiResource('categoria-semantica', CategoriaSemanticaController::class)->middleware(['role:administrador']);
 
     // Rutas para gestionar relaciones entre señas y categorías
-    Route::apiResource('relaciones-seña-categoria', RelacionSeñaCategoriaController::class)->middleware(['role:administrador']);
+    Route::apiResource('relacion-seña-categoria', RelacionSeñaCategoriaController::class)->middleware(['role:administrador']);
 
    // Route::apiResource('roles',RolePermissionController::class)->middleware(['role:administrador'])->only(['createRole', 'createPermission', 'destroy','assingRolesToUsers', 'index', 'destroy','update']);
     Route::apiResource('roles',RoleController::class);

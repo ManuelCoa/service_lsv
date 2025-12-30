@@ -10,6 +10,11 @@ class CategoriaSemantica extends Model
     use HasFactory;
 
     protected $primaryKey = 'id_categoria';
+    
+    
+    protected $fillable = [
+        'nombre'
+    ];
 
     public function señas()
     {
