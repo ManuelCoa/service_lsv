@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Abecedario en Señas</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 40px; }
+    #contenedor { border: 1px solid #ccc; padding: 30px; border-radius: 10px; display: inline-block; }
+    img { max-width: 200px; height: auto; margin-bottom: 20px; }
+    button { margin: 10px 15px; padding: 10px 20px; font-size: 16px; }
+    .letra { font-size: 48px; font-weight: bold; margin-bottom: 15px; }
+    .ejemplo { color: #333; font-style: italic; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <div id="contenedor">
+    <div class="letra" id="letra"></div>
+    <img id="imagen" src="" alt="Imagen de la seña">
+    <div id="instruccion"></div>
+    <div class="ejemplo" id="ejemplo"></div>
+    <div>
+      <button id="anterior">Anterior</button>
+      <button id="siguiente">Siguiente</button>
+    </div>
+  </div>
+
+  <script>
+    // Cambia esta URL por la de tu API real
+    const API_URL = 'http://127.0.0.1:8000/api/señas';
+
+    let letras = [];
+    let indice = 0;
+
+    // Función para mostrar una letra en pantalla
+    function mostrarLetra(idx) {
+      if (letras.length === 0) return;
+      const letraObj = letras[idx];
+      document.getElementById('letra').textContent = letraObj.letra;
+      // Si la ruta de la imagen no es absoluta, la convertimos a absoluta
+      let imgSrc = letraObj.imagen_seña;
+      if (!imgSrc.startsWith('http')) {
+        // Cambia la URL base por la de tu servidor si es necesario
+        const base = window.location.origin;
+        imgSrc = imgSrc.startsWith('/') ? base + imgSrc : base + '/' + imgSrc;
+      }
+      document.getElementById('imagen').src = imgSrc;
+      document.getElementById('imagen').alt = "Imagen de la seña " + letraObj.letra;
+      document.getElementById('instruccion').textContent = letraObj.instruccion;
+      document.getElementById('ejemplo').textContent = "Ejemplo: " + letraObj.ejemplo_palabra;
+    }
+
+    // Navegación
+    document.getElementById('anterior').onclick = function() {
+      if (indice > 0) {
+        indice--;
+        mostrarLetra(indice);
+      }
+    };
+    document.getElementById('siguiente').onclick = function() {
+      if (indice < letras.length - 1) {
+        indice++;
+        mostrarLetra(indice);
+      }
+    };
+
+    // Consultar la API y cargar las letras
+    fetch(API_URL)
+      .then(res => res.json())
+      .then(json => {
+        // Accedemos a las letras
+        letras = json.data[0].contenido.letras;
+        mostrarLetra(indice);
+      })
+      .catch(err => {
+        document.getElementById('contenedor').innerHTML = "Error al cargar los datos.";
+        console.error(err);
+      });
+  </script>
+</body>
+</html>
