@@ -8,13 +8,26 @@ use Illuminate\Http\Request;
 
 class SeñaController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $señas = Seña::all();
+        $query = Seña::query();
+
+        // Filtro por nombre de categoría (minúsculas, sin acentos)
+        $categoria = $request->get('categoria');
+        if ($categoria) {
+            $query->whereHas('categorias', function ($q) use ($categoria) {
+                $q->whereRaw('LOWER(REPLACE(nombre, " ", "")) = ?', [
+                    strtolower(str_replace(' ', '', $categoria))
+                ]);
+            });
+        }
+
+        $señas = $query->get();
+
         return response()->json([
             'status' => 'success',
             'data' => SeñaResource::collection($señas),
-        ], 200); // Usar el código de estado HTTP directamente
+        ], 200);
     }
 
     public function show(Seña $seña)
@@ -22,7 +35,7 @@ class SeñaController extends Controller
         return response()->json([
             'status' => 'success',
             'data' => new SeñaResource($seña),
-        ], 200); // Usar el código de estado HTTP directamente
+        ], 200); 
     }
 
     public function store(Request $request)
@@ -31,7 +44,7 @@ class SeñaController extends Controller
         return response()->json([
             'status' => 'success',
             'data' => new SeñaResource($seña),
-        ], 201); // Usar el código de estado HTTP directamente
+        ], 201); 
     }
 
     public function update(Request $request, Seña $seña)
@@ -40,7 +53,7 @@ class SeñaController extends Controller
         return response()->json([
             'status' => 'success',
             'data' => new SeñaResource($seña),
-        ], 200); // Usar el código de estado HTTP directamente
+        ], 200); 
     }
 
     public function destroy(Seña $seña)
@@ -49,6 +62,6 @@ class SeñaController extends Controller
         return response()->json([
             'status' => 'success',
             'message' => 'Seña eliminada correctamente',
-        ], 204); // Usar el código de estado HTTP directamente
+        ], 204); 
     }
 }

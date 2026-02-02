@@ -8,40 +8,46 @@ use App\Models\RelacionSeñaCategoria;
 
 class RelacionSeñaCategoriaSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        RelacionSeñaCategoria::insert([
-                //['id_seña' => 57, 'id_categoria' => 1],
-                //['id_seña' => 58, 'id_categoria' => 1],
-                //['id_seña' => 59, 'id_categoria' => 1],
-                ['id_seña' => 1, 'id_categoria' => 1],
-                ['id_seña' => 2, 'id_categoria' => 1],
-                ['id_seña' => 3, 'id_categoria' => 1],
-                ['id_seña' => 4, 'id_categoria' => 1],
-                ['id_seña' => 5, 'id_categoria' => 1],
-                ['id_seña' => 6, 'id_categoria' => 1],
-                ['id_seña' => 7, 'id_categoria' => 1],
-                ['id_seña' => 8, 'id_categoria' => 1],
-                ['id_seña' => 9, 'id_categoria' => 1],
-                ['id_seña' => 10, 'id_categoria' => 1],
-                ['id_seña' => 11, 'id_categoria' => 1],
-                ['id_seña' => 12, 'id_categoria' => 1],
-                ['id_seña' => 13, 'id_categoria' => 1],
-                ['id_seña' => 14, 'id_categoria' => 1],
-                ['id_seña' => 15, 'id_categoria' => 1],
-                ['id_seña' => 16, 'id_categoria' => 1],
-                ['id_seña' => 17, 'id_categoria' => 1],
-                ['id_seña' => 18, 'id_categoria' => 1],
-                ['id_seña' => 19, 'id_categoria' => 1],
-                ['id_seña' => 20, 'id_categoria' => 1],
-                ['id_seña' => 21, 'id_categoria' => 1],
-                ['id_seña' => 22, 'id_categoria' => 1],
-                ['id_seña' => 23, 'id_categoria' => 1],
-                ['id_seña' => 24, 'id_categoria' => 1],
-                ['id_seña' => 25, 'id_categoria' => 1],
-        ]);
+        // Limpiar tabla antes de insertar
+        RelacionSeñaCategoria::truncate();
+
+        // ABECEDARIO (1-28) -> Categoría 1
+        $this->asignarCategoria(range(1, 28), 1);
+        
+        // NÚMEROS (29-58) -> Categoría 2  
+        $this->asignarCategoria(range(29, 58), 2);
+        
+        // DÍAS DE LA SEMANA (59-66) -> Categoría 3
+        $this->asignarCategoria(range(59, 66), 3);
+        
+        // COLORES (67-77 estimado) -> Categoría 4
+        $this->asignarCategoria(range(67, 77), 4);
+        
+        // MESES DEL AÑO (78-89 estimado, 12 meses) -> Categoría 5
+        $this->asignarCategoria(range(78, 89), 5);
+        
+        // FAMILIA (90-105 estimado, 16 miembros) -> Categoría 6
+        $this->asignarCategoria(range(90, 105), 6);
+        
+        // VOCABULARIO GENERAL (106-200 estimado) -> Categoría 7
+        $this->asignarCategoria(range(106, 148), 7);
+    }
+
+    private function asignarCategoria(array $idsSeñas, int $idCategoria): void
+    {
+        $relaciones = [];
+        
+        foreach ($idsSeñas as $idSeña) {
+            $relaciones[] = [
+                'id_seña' => $idSeña,
+                'id_categoria' => $idCategoria,
+                'created_at' => now(),
+                'updated_at' => now()
+            ];
+        }
+        
+        RelacionSeñaCategoria::insert($relaciones);
     }
 }

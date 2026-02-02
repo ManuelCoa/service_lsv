@@ -13,8 +13,16 @@ class CategoriaSemanticaSeeder extends Seeder
      */
     public function run(): void
     {
-         CategoriaSemantica::insert([
-            ['nombre' => 'Educacion'],
-        ]);
+        $categorias = [
+            ['nombre' => 'Abecedario'],
+            ['nombre' => 'Números'], 
+            ['nombre' => 'Días de la semana'],
+            ['nombre' => 'Colores'],
+            ['nombre' => 'Meses del año'],
+            ['nombre' => 'Familia'],
+            ['nombre' => 'Vocabulario general'],
+        ];
+
+        CategoriaSemantica::insert($categorias);
     }
 }

@@ -15,14 +15,53 @@ class DiasSemanaSeeder extends Seeder
     {
         
         Seña::insert([
-            ['nombre' => 'dias de la semana', 'descripcion' => 'día lunes', 'url_img' => 'señas/dias_semana/diasSemana.gif', 'id_leccion' => 1],
-            ['nombre' => 'lunes', 'descripcion' => 'día lunes', 'url_img' => 'señas/dias_semana/lunes.gif', 'id_leccion' => 1],
-            ['nombre' => 'martes', 'descripcion' => 'día martes', 'url_img' => 'señas/dias_semana/martes.gif', 'id_leccion' => 1],
-            ['nombre' => 'miércoles', 'descripcion' => 'día miércoles', 'url_img' => 'señas/dias_semana/miercoles.gif', 'id_leccion' => 1],
-            ['nombre' => 'jueves', 'descripcion' => 'día jueves', 'url_img' => 'señas/dias_semana/jueves.gif', 'id_leccion' => 1],
-            ['nombre' => 'viernes', 'descripcion' => 'día viernes', 'url_img' => 'señas/dias_semana/viernes.gif', 'id_leccion' => 1],
-            ['nombre' => 'sábado', 'descripcion' => 'día sábado', 'url_img' => 'señas/dias_semana/sabado.gif', 'id_leccion' => 1],
-            ['nombre' => 'domingo', 'descripcion' => 'día domingo', 'url_img' => 'señas/dias_semana/domingo.gif', 'id_leccion' => 1],
+            [
+                'nombre' => 'Días de la semana', 
+                'descripcion' => 'día lunes', 'url_img' => 'señas/dias_semana/diasSemana.gif', 
+                'id_leccion' => 1
+            ],
+            [
+                'nombre' => 'Lunes', 
+                'descripcion' => 'día lunes', 
+                'url_img' => 'señas/dias_semana/lunes.gif', 
+                'id_leccion' => 1
+            ],
+            [
+                'nombre' => 'Martes', 
+                'descripcion' => 'día martes', 
+                'url_img' => 'señas/dias_semana/martes.gif', 
+                'id_leccion' => 1
+            ],
+            [
+                'nombre' => 'Miércoles', 
+                'descripcion' => 'día miércoles', 
+                'url_img' => 'señas/dias_semana/miercoles.gif', 
+                'id_leccion' => 1
+            ],
+            [
+                'nombre' => 'Jueves', 
+                'descripcion' => 'día jueves', 
+                'url_img' => 'señas/dias_semana/jueves.gif', 
+                'id_leccion' => 1
+            ],
+            [
+                'nombre' => 'Viernes', 
+                'descripcion' => 'día viernes', 
+                'url_img' => 'señas/dias_semana/viernes.gif', 
+                'id_leccion' => 1
+            ],
+            [
+                'nombre' => 'Sábado', 
+                'descripcion' => 'día sábado', 
+                'url_img' => 'señas/dias_semana/sabado.gif', 
+                'id_leccion' => 1
+            ],
+            [
+                'nombre' => 'Domingo', 
+                'descripcion' => 'día domingo', 
+                'url_img' => 'señas/dias_semana/domingo.gif', 
+                'id_leccion' => 1
+            ],
         ]);
     }
 }

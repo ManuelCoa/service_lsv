@@ -13,12 +13,10 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\LeccionController;
 use App\Http\Controllers\ProgresoController;
 
-/*
+
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
-*/
-// routes/api.php
 
 Route::middleware('guest')->group(function () {
     Route::post('login', [AuthController::class, 'login']);

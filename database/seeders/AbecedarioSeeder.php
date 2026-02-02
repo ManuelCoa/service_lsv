@@ -150,7 +150,7 @@ class AbecedarioSeeder extends Seeder
             [
                 'nombre' => 'U',
                 'descripcion' => 'letra U',
-                'url_img' => 'señas/abecedario/u.gif',
+                'url_img' => 'señas/abecedario/u.jpg',
                 'id_leccion' => 1,
             ],
             [

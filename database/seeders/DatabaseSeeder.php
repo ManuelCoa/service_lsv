@@ -24,9 +24,10 @@ class DatabaseSeeder extends Seeder
             AbecedarioSeeder::class,
             NumerosSeeder::class,  
             DiasSemanaSeeder::class,
-            MesesAñoSeeder::class,
             ColoresSeeder::class,
+            MesesAñoSeeder::class,
             FamiliaSeeder::class,
+            VocabularioSeeder::class,
             CategoriaSemanticaSeeder::class,
             RelacionSeñaCategoriaSeeder::class,
                         

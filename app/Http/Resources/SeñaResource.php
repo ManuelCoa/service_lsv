@@ -14,11 +14,10 @@ class SeñaResource extends JsonResource
     {
         return [
             'id' => $this->id_seña,
-            // 'id_leccion' => $this->id_leccion,
+            'id_leccion' => $this->id_leccion,
             'nombre' => $this->nombre,
             'descripcion' => $this->descripcion,
             'url_img' => $this->url_img,
-            'categoria' => new CategoriaSemanticaResource($this->categoriaSemantica),
             'categorias_relacionadas' => CategoriaSemanticaResource::collection($this->categorias),
         ];
     }
