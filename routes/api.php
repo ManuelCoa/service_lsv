@@ -12,11 +12,7 @@ use App\Http\Controllers\RolePermissionController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\LeccionController;
 use App\Http\Controllers\ProgresoController;
-
-
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:api');
+use App\Http\Resources\UserResource;
 
 Route::middleware('guest')->group(function () {
     Route::post('login', [AuthController::class, 'login']);
@@ -26,11 +22,18 @@ Route::middleware('guest')->group(function () {
 Route::middleware(['auth:api'])->group(function () {
     Route::post('logout', [AuthController::class, 'logout']);
 
+    Route::get('/user', function (Request $request) {
+        return $request->user();
+    });
+
+    Route::get('profile', function (Request $request) {
+        return new UserResource($request->user());
+    });
+    Route::put('profile', [UserController::class, 'updateProfile']);
+
     Route::get('señas', [SeñaController::class, 'index']);
     Route::get('lecciones', [LeccionController::class, 'index']);
     
-    
-
     Route::middleware(['role:administrador'])->group(function () {
         Route::apiResource('lecciones', LeccionController::class)
             ->except(['index']);
@@ -40,9 +43,9 @@ Route::middleware(['auth:api'])->group(function () {
 
         Route::apiResource('users', UserController::class)
             ->except(['store']);     
-
-            Route::apiResource('roles', RoleController::class);
-            Route::post('roles/assign', [RoleController::class, 'assignRoleToUser']);
+            
+        Route::apiResource('roles', RoleController::class);
+        Route::post('roles/assign', [RoleController::class, 'assignRoleToUser']);
         Route::apiResource('categoria-semantica', CategoriaSemanticaController::class);
         Route::apiResource('relacion-seña-categoria', RelacionSeñaCategoriaController::class);
     });

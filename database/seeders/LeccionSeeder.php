@@ -16,35 +16,36 @@ class LeccionSeeder extends Seeder
         Leccione::insert([
             //nivel 1
             [
-            'titulo' => 'Abecedario',
-            'id_nivel' => 01,
+                'titulo' => 'Abecedario',
+                'id_nivel' => 01,
             ],
             [
-            'titulo' => 'Numeros',
-            'id_nivel' => 01,
+                'titulo' => 'Numeros',
+                'id_nivel' => 01,
             ],
             [
-            'titulo' => 'Dias de la semana',
-            'id_nivel' => 01,
+                'titulo' => 'Dias de la semana',
+                'id_nivel' => 01,
             ],
             //nivel 2
             [
-            'titulo' => 'meses del año',
-            'id_nivel' => 02,
+                'titulo' => 'meses del año',
+                'id_nivel' => 02,
             ],
             [
-            'titulo' => 'colores',
-            'id_nivel' => 02,
+                'titulo' => 'colores',
+                'id_nivel' => 02,
             ],
 
             //nivel 3
             [
-            'titulo' => 'familia',
-            'id_nivel' => 03,
+                'titulo' => 'familia',
+                'id_nivel' => 03,
             ],
-
-        
-        
+            [
+                'titulo' => 'vocabularios',
+                'id_nivel' => 03,
+            ],
         ]);
     }
 }

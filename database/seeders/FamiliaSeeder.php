@@ -16,96 +16,97 @@ class FamiliaSeeder extends Seeder
         Seña::insert([
             [
                 'nombre' => 'Abuelo', 
-                'descripcion' => 'familia abuelo', 
+                'descripcion' => 'El puño toca la barbilla varias veces, seguido de un roce suave del dedo índice y pulgar sobre la nariz.', 
                 'url_img' => 'señas/familia/abuelo.gif', 
                 'id_leccion' => 1
             ],
             [
                 'nombre' => 'Abuela', 
-                'descripcion' => 'familia abuela', 
+                'descripcion' => 'El puño toca la barbilla varias veces, seguido de un roce suave del dedo índice y pulgar sobre la oreja.', 
                 'url_img' => 'señas/familia/abuela.gif', 
                 'id_leccion' => 1
             ],
             [
-                'nombre' => 'Hermano', 'descripcion' => 
-                'familia hermano', 'url_img' => 'señas/familia/hermano.gif', 
+                'nombre' => 'Hermano', 
+                'descripcion' => 'El dedo índice se desliza sobre el antebrazo desde la muñeca hacia arriba.', 
+                'url_img' => 'señas/familia/hermano.gif', 
                 'id_leccion' => 1
             ],
             [
                 'nombre' => 'Hermana', 
-                'descripcion' => 'familia hermana', 
+                'descripcion' => ' El dedo índice se desliza sobre el antebrazo desde la muñeca hacia arriba, seguido de un roce suave del dedo índice y pulgar sobre la oreja.', 
                 'url_img' => 'señas/familia/hermana.gif', 
                 'id_leccion' => 1
             ],
             [
                 'nombre' => 'Mamá', 
-                'descripcion' => 'familia mamá', 
+                'descripcion' => "La mano 'U' toca un lado de la boca y después el otro.", 
                 'url_img' => 'señas/familia/mama.gif', 
                 'id_leccion' => 1
             ],
             [
                 'nombre' => 'Papá', 
-                'descripcion' => 'familia papa', 
+                'descripcion' => "La mano 'H' toca la barbilla y después la frente.", 
                 'url_img' => 'señas/familia/papa.gif', 
                 'id_leccion' => 1
             ],
             [
                 'nombre' => 'Niño', 
-                'descripcion' => 'familia niño', 
+                'descripcion' => "La mano 'H' se desliza hacia adelante sobre la otra mano 'H'", 
                 'url_img' => 'señas/familia/niño.gif', 
                 'id_leccion' => 1
             ],
             [
                 'nombre' => 'Niña', 
-                'descripcion' => 'familia niña', 
+                'descripcion' => "La mano 'H' se desliza hacia adelante sobre la otra mano 'H', seguido de un roce suave del dedo índice y pulgar sobre la oreja.", 
                 'url_img' => 'señas/familia/niña.gif', 
                 'id_leccion' => 1
             ],
             [
                 'nombre' => 'Primo', 
-                'descripcion' => 'familia primo', 
+                'descripcion' => 'El dedo índice se mueve de un lado a otra sobre el otro dedo índice.', 
                 'url_img' => 'señas/familia/primo.gif', 
                 'id_leccion' => 1
             ],
             [
                 'nombre' => 'Prima', 
-                'descripcion' => 'familia prima', 
+                'descripcion' => 'El dedo índice se mueve de un lado a otra sobre el otro dedo índice,  seguido de un roce suave del dedo índice y pulgar sobre la oreja.', 
                 'url_img' => 'señas/familia/prima.gif', 
                 'id_leccion' => 1
             ],
             [
                 'nombre' => 'Sobrina', 
-                'descripcion' => 'familia sobrina', 
+                'descripcion' => 'La palma abierta de la mano derecha toca suavemente el centro del pecho, seguido de un roce suave de las yemas del dedo índice y pulgar sobre la oreja.', 
                 'url_img' => 'señas/familia/sobrina.gif', 
                 'id_leccion' => 1
             ],
             [
                 'nombre' => 'Sobrino', 
-                'descripcion' => 'familia sobrino', 
+                'descripcion' => 'La palma abierta de la mano derecha toca suavemente el centro del pecho, seguido de un roce suave de las yemas del dedo índice y pulgar sobre la punta de la nariz.', 
                 'url_img' => 'señas/familia/sobrino.gif', 
                 'id_leccion' => 1
             ],
             [
                 'nombre' => 'Suegra', 
-                'descripcion' => 'familia suegra', 
+                'descripcion' => "La mano 'F' toca la barbilla, seguido de un roce suave del dedo índice y pulgar sobre la oreja.", 
                 'url_img' => 'señas/familia/suegra.gif', 
                 'id_leccion' => 1
             ],
             [
                 'nombre' => 'Suegro', 
-                'descripcion' => 'familia suegro', 
+                'descripcion' => "La mano 'F' toca la barbilla, seguido de un roce suave del dedo índice y pulgar sobre la punta de la nariz.",
                 'url_img' => 'señas/familia/suegro.gif', 
                 'id_leccion' => 1
             ],
             [
                 'nombre' => 'Tío', 
-                'descripcion' => 'familia tío', 
+                'descripcion' => 'El dedo índice toca varias veces el otro dedo índice.', 
                 'url_img' => 'señas/familia/tio.gif', 
                 'id_leccion' => 1
             ],
             [
                 'nombre' => 'Tía', 
-                'descripcion' => 'familia tía', 
+                'descripcion' => 'El dedo índice toca varias veces el otro dedo índice, seguido de un roce suave del dedo índice y pulgar sobre la oreja.', 
                 'url_img' => 'señas/familia/tia.gif', 
                 'id_leccion' => 1
             ],

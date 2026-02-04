@@ -16,39 +16,39 @@ class ColoresSeeder extends Seeder
         Seña::insert([
             [
                 'nombre' => 'Blanco', 
-                'descripcion' => 'color blanco', 
+                'descripcion' => 'El puño se mueve del pecho hacia afuera terminando con la mano abierta.', 
                 'url_img' => 'señas/colores/blanco.gif', 'id_leccion' => 1],
             [
                 'nombre' => 'Amarillo', 
-                'descripcion' => 'color amarillo', 
+                'descripcion' => 'El pulgar y el índice pegados, se mueven hacia arriba en la mejilla.', 
                 'url_img' => 'señas/colores/amarillo.gif', 'id_leccion' => 1],
             [
                 'nombre' => 'Azul', 
-                'descripcion' => 'color azul', 
+                'descripcion' => 'El dedo medio se desliza sobre el pulgar a nivel de la mejilla.', 
                 'url_img' => 'señas/colores/azul.gif', 
                 'id_leccion' => 1
             ],
             [
                 'nombre' => 'Colores', 
-                'descripcion' => 'color colores', 
+                'descripcion' => 'Los dedos índices circulan alternadamente en frente de la boca.', 
                 'url_img' => 'señas/colores/colores.gif', 
                 'id_leccion' => 1
             ],
             [
                 'nombre' => 'Gris', 
-                'descripcion' => 'color gris', 
+                'descripcion' => 'El índice y el dedo medio pegan ligeramente el pulgar varias veces.', 
                 'url_img' => 'señas/colores/gris.gif', 
                 'id_leccion' => 1
             ],
             [
                 'nombre' => 'Marrón', 
-                'descripcion' => 'color marron', 
+                'descripcion' => 'El índice y dedo medio forman círculo pequeño debajo de la barbilla. Movimiento circular fluido sin contacto.', 
                 'url_img' => 'señas/colores/marron.gif', 
                 'id_leccion' => 1
             ],
             [
                 'nombre' => 'Anaranjado', 
-                'descripcion' => 'color naranja', 
+                'descripcion' => "El pulgar de la mano 'A' se mueve hacia abajo en el otro antebrazo.", 
                 'url_img' => 'señas/colores/naranja.gif', 
                 'id_leccion' => 1
             ],
@@ -60,19 +60,19 @@ class ColoresSeeder extends Seeder
             ],
             [
                 'nombre' => 'Rojo', 
-                'descripcion' => 'color rojo', 
+                'descripcion' => 'El índice se mueve hacia abajo sobre los labios varias veces.', 
                 'url_img' => 'señas/colores/rojo.gif', 
                 'id_leccion' => 1
             ],
             [
                 'nombre' => 'Rosado', 
-                'descripcion' => 'color rosado', 
+                'descripcion' => "La mano 'X' circula en la mejilla.", 
                 'url_img' => 'señas/colores/rosado.gif', 
                 'id_leccion' => 1
             ],
             [
                 'nombre' => 'Verde', 
-                'descripcion' => 'color verde', 
+                'descripcion' => 'El pulgar y el índice se pegan y tocan los dientes.', 
                 'url_img' => 'señas/colores/verde.gif', 
                 'id_leccion' => 1
             ],
