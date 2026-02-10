@@ -16,73 +16,73 @@ class VocabularioSeeder extends Seeder
         Seña::insert([
             [
                 'nombre' => 'Agua', 
-                'descripcion' => 'agua', 
+                'descripcion' => 'La mano “A” se mueve hacia la boca.', 
                 'url_img' => 'señas/vocabulario/agua.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Amiga', 
-                'descripcion' => 'amiga', 
+                'descripcion' => 'Las dos manos se agarran en frente del cuerpo.', 
                 'url_img' => 'señas/vocabulario/amiga.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Amigo', 
-                'descripcion' => 'amigo', 
+                'descripcion' => 'Las dos manos se agarran en frente del cuerpo.', 
                 'url_img' => 'señas/vocabulario/amigo.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Aprender', 
-                'descripcion' => 'aprender', 
+                'descripcion' => 'La mano abierta se mueve de la otra palma hacia la frente cerrando los dedos.', 
                 'url_img' => 'señas/vocabulario/aprender.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Árbol', 
-                'descripcion' => 'árbol', 
+                'descripcion' => 'La mano abierta, con el codo sostenido por la otra mano, se mueve un poco.', 
                 'url_img' => 'señas/vocabulario/arbol.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Ayudar', 
-                'descripcion' => 'ayudar', 
+                'descripcion' => 'El puño sobre la otra palma se mueve hacia adelante o hacia el cuerpo dependiando de', 
                 'url_img' => 'señas/vocabulario/ayudar.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Azúcar', 
-                'descripcion' => 'azúcar', 
+                'descripcion' => 'Con la mano palma abajo, los dedos y el pulgar se mueven entre sí.', 
                 'url_img' => 'señas/vocabulario/azucar.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Bendecir', 
-                'descripcion' => 'bendecir', 
+                'descripcion' => "Las manos 'A' tocan la barbilla y se mueven hacia abajo y adelante terminando abiertas", 
                 'url_img' => 'señas/vocabulario/bendecir.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Biblia', 
-                'descripcion' => 'biblia', 
+                'descripcion' => "La combinación de las señas 'JESÚS' y 'LIBRO'.", 
                 'url_img' => 'señas/vocabulario/biblia.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Bien', 
-                'descripcion' => 'bien', 
+                'descripcion' => "La mano 'O' desinflada se mueve de la barbilla hacia afuera terminando en la mano abierta.", 
                 'url_img' => 'señas/vocabulario/bien.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Bienvenido', 
-                'descripcion' => 'bienvenido', 
+                'descripcion' => "La seña de 'BIEN' y luego la seña de 'INVITAR'.", 
                 'url_img' => 'señas/vocabulario/bienvenido.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Bonito', 
-                'descripcion' => 'bonito', 
+                'descripcion' => "El pulgar y el dedo índice pegados tocan la barbilla y se cambian a la mano 'L'.", 
                 'url_img' => 'señas/vocabulario/bonito.gif', 
                 'id_leccion' => 3
             ],
@@ -112,19 +112,19 @@ class VocabularioSeeder extends Seeder
             ],
             [
                 'nombre' => 'Café', 
-                'descripcion' => 'café', 
+                'descripcion' => "La mano 'F' se mueve hacia la boca en la forma de tomar café.", 
                 'url_img' => 'señas/vocabulario/cafe.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Camisa', 
-                'descripcion' => 'camisa', 
+                'descripcion' => "La seña de 'ROPA' pero con una sola mano.", 
                 'url_img' => 'señas/vocabulario/camisa.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Cansado', 
-                'descripcion' => 'cansado', 
+                'descripcion' => 'Las manos curvas sobre el pecho se mueven hacia abajo, volteándose palma arriba.', 
                 'url_img' => 'señas/vocabulario/cansado.gif', 
                 'id_leccion' => 3
             ],
@@ -166,25 +166,25 @@ class VocabularioSeeder extends Seeder
             ],
             [
                 'nombre' => 'Dormir', 
-                'descripcion' => 'dormir', 
+                'descripcion' => 'El gesto natural.', 
                 'url_img' => 'señas/vocabulario/dormir.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Feo', 
-                'descripcion' => 'feo', 
+                'descripcion' => 'La mano curva se mueve hacia afuera en la mejilla.', 
                 'url_img' => 'señas/vocabulario/feo.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Flor', 
-                'descripcion' => 'flor', 
+                'descripcion' => "La mano 'O' se mueve de la nariz hasta afuera terminando abierta.", 
                 'url_img' => 'señas/vocabulario/flor.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Gracias', 
-                'descripcion' => 'gracias', 
+                'descripcion' => 'Ambas manos abiertas se mueven de la barbilla hacia adelante.', 
                 'url_img' => 'señas/vocabulario/gracias.gif', 
                 'id_leccion' => 3
             ],
@@ -202,7 +202,7 @@ class VocabularioSeeder extends Seeder
             ],
             [
                 'nombre' => 'Mesa', 
-                'descripcion' => 'mesa', 
+                'descripcion' => 'Ambas manos abiertas hacen la forma de una mesa y los lados.', 
                 'url_img' => 'señas/vocabulario/mesa.gif', 
                 'id_leccion' => 3
             ],
@@ -214,7 +214,7 @@ class VocabularioSeeder extends Seeder
             ],
             [
                 'nombre' => 'Oyente', 
-                'descripcion' => 'oyente', 
+                'descripcion' => 'La mano abierta, en forma horizontal, circula en frente de la boca.', 
                 'url_img' => 'señas/vocabulario/oyente.gif', 
                 'id_leccion' => 3
             ],
@@ -226,7 +226,7 @@ class VocabularioSeeder extends Seeder
             ],
             [
                 'nombre' => 'Pena', 
-                'descripcion' => 'pena', 
+                'descripcion' => 'La mano abierta se coloca en frente de la cara sin tocarla, mientras baja la cabeza un poco.', 
                 'url_img' => 'señas/vocabulario/pena.gif', 
                 'id_leccion' => 3
             ],
@@ -238,7 +238,7 @@ class VocabularioSeeder extends Seeder
             ],
             [
                 'nombre' => 'Sal', 
-                'descripcion' => 'sal', 
+                'descripcion' => 'El dedo índice y el pulgar se mueven entre sí.', 
                 'url_img' => 'señas/vocabulario/sal.gif', 
                 'id_leccion' => 3
             ],
@@ -256,19 +256,19 @@ class VocabularioSeeder extends Seeder
             ],
             [
                 'nombre' => 'Trabajar', 
-                'descripcion' => 'trabajar', 
+                'descripcion' => 'Los puños se juntan y se separan varias veces en frente del cuerpo.', 
                 'url_img' => 'señas/vocabulario/trabajar.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Universidad', 
-                'descripcion' => 'universidad', 
+                'descripcion' => 'La mano con el dedo índice y el meñique extendidos, toca el hombro opuesto.', 
                 'url_img' => 'señas/vocabulario/universidad.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Zapato', 
-                'descripcion' => 'zapato', 
+                'descripcion' => "Las dos manos 'X' se mueve hacia abajo en frente del cuerpo", 
                 'url_img' => 'señas/vocabulario/zapato.gif', 
                 'id_leccion' => 3
             ],

@@ -17,7 +17,8 @@ class DiasSemanaSeeder extends Seeder
         Seña::insert([
             [
                 'nombre' => 'Días de la semana', 
-                'descripcion' => 'día lunes', 'url_img' => 'señas/dias_semana/diasSemana.gif', 
+                'descripcion' => 'día lunes', 
+                'url_img' => 'señas/dias_semana/diasSemana.gif', 
                 'id_leccion' => 1
             ],
             [
