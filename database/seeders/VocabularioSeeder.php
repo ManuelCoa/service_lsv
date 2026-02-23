@@ -16,19 +16,19 @@ class VocabularioSeeder extends Seeder
         Seña::insert([
             [
                 'nombre' => 'Agua', 
-                'descripcion' => 'La mano “A” se mueve hacia la boca.', 
+                'descripcion' => "La mano 'A' se mueve hacia la boca.", 
                 'url_img' => 'señas/vocabulario/agua.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Amiga', 
-                'descripcion' => 'Las dos manos se agarran en frente del cuerpo.', 
+                'descripcion' => ' Las dos manos se agarran frente al cuerpo, seguido de un toque suave en la oreja.', 
                 'url_img' => 'señas/vocabulario/amiga.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Amigo', 
-                'descripcion' => 'Las dos manos se agarran en frente del cuerpo.', 
+                'descripcion' => 'Las dos manos se agarran frente al cuerpo, seguido de un toque suave sobre la nariz.', 
                 'url_img' => 'señas/vocabulario/amigo.gif', 
                 'id_leccion' => 3
             ],
@@ -46,7 +46,7 @@ class VocabularioSeeder extends Seeder
             ],
             [
                 'nombre' => 'Ayudar', 
-                'descripcion' => 'El puño sobre la otra palma se mueve hacia adelante o hacia el cuerpo dependiando de', 
+                'descripcion' => 'El puño sobre la otra palma se mueve hacia adelante o hacia el cuerpo dependiando del contexto de la oración.', 
                 'url_img' => 'señas/vocabulario/ayudar.gif', 
                 'id_leccion' => 3
             ],
@@ -76,7 +76,7 @@ class VocabularioSeeder extends Seeder
             ],
             [
                 'nombre' => 'Bienvenido', 
-                'descripcion' => "La seña de 'BIEN' y luego la seña de 'INVITAR'.", 
+                'descripcion' => "Las manos 'V' se mueven de un lado a otro en frente del cuerpo.", 
                 'url_img' => 'señas/vocabulario/bienvenido.gif', 
                 'id_leccion' => 3
             ],
@@ -88,25 +88,25 @@ class VocabularioSeeder extends Seeder
             ],
             [
                 'nombre' => 'Broma', 
-                'descripcion' => 'broma', 
+                'descripcion' => "Toca la nariz y luego las manos en forma de 'C' se mueven hacia adelante frente al pecho.", 
                 'url_img' => 'señas/vocabulario/broma.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Buenas noches', 
-                'descripcion' => 'buenas noches', 
+                'descripcion' => "La mano 'O' desinflada se mueve de la barbilla hacia afuera terminando abierta, seguido de las manos abiertas moviéndose hacia adentro terminando en puño con brazos cruzados.", 
                 'url_img' => 'señas/vocabulario/buenasnoches.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Buenas tardes', 
-                'descripcion' => 'buenas tardes', 
+                'descripcion' => "La mano 'O' desinflada se mueve de la barbilla hacia afuera terminando abierta, seguido de la mano 'F' de lado circulando frente a la boca.", 
                 'url_img' => 'señas/vocabulario/buenastardes.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Buenos días', 
-                'descripcion' => 'buenos días', 
+                'descripcion' => "La mano 'O' desinflada se mueve de la barbilla hacia afuera terminando abierta, seguido de pulgar e índice tocando la cara entre la sien y el pómulo.", 
                 'url_img' => 'señas/vocabulario/buenosdias.gif', 
                 'id_leccion' => 3
             ],
@@ -130,37 +130,37 @@ class VocabularioSeeder extends Seeder
             ],
             [
                 'nombre' => 'Chao', 
-                'descripcion' => 'chao', 
+                'descripcion' => 'Las manos abiertas se mueven de lado a lado frente al cuerpo.', 
                 'url_img' => 'señas/vocabulario/chao.gif', 
                 'id_leccion' => 3
             ],
             [
-                'nombre' => '¿Cómo estas?', 
-                'descripcion' => 'como estas', 
+                'nombre' => '¿Cómo estás?', 
+                'descripcion' => "Haz una 'O' floja con la palma arriba y muévela en círculo frente a ti, luego baja la mano abierta (palma abajo) y apunta con el índice a la persona.", 
                 'url_img' => 'señas/vocabulario/comoestas.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'De nada', 
-                'descripcion' => 'de nada', 
+                'descripcion' => "Una o ambas manos en forma de 'F' se mueven de lado a lado frente al pecho.", 
                 'url_img' => 'señas/vocabulario/denada.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Dios te bendiga', 
-                'descripcion' => 'dios te bendiga', 
+                'descripcion' => "Índice y pulgar se cierran al lado del ojo, luego la mano 'B' se mueve hacia abajo junto a la cara, seguidas de las manos 'A' tocando la barbilla y moviéndose hacia abajo y adelante terminando abiertas.", 
                 'url_img' => 'señas/vocabulario/diostebendiga.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Doctor', 
-                'descripcion' => 'doctor', 
+                'descripcion' => 'El dedo índice, medio y pulgar tocan la muñeca, seguido de un toque suave sobre la nariz.', 
                 'url_img' => 'señas/vocabulario/doctor.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Doctora', 
-                'descripcion' => 'doctora', 
+                'descripcion' => ' El dedo índice, medio y pulgar tocan la muñeca, seguido de un toque suave sobre la oreja.', 
                 'url_img' => 'señas/vocabulario/doctora.gif', 
                 'id_leccion' => 3
             ],
@@ -178,7 +178,7 @@ class VocabularioSeeder extends Seeder
             ],
             [
                 'nombre' => 'Flor', 
-                'descripcion' => "La mano 'O' se mueve de la nariz hasta afuera terminando abierta.", 
+                'descripcion' => "Haz una 'C' o extiende índice y medio para tocar alrededor de la oreja, luego pasa la mano horizontal en círculo frente a la boca.", 
                 'url_img' => 'señas/vocabulario/flor.gif', 
                 'id_leccion' => 3
             ],
@@ -190,13 +190,13 @@ class VocabularioSeeder extends Seeder
             ],
             [
                 'nombre' => 'Hola', 
-                'descripcion' => 'hola', 
+                'descripcion' => 'La mano abierta en posición de saludo se eleva desde el hombro hacia adelante con un movimiento suave y natural.', 
                 'url_img' => 'señas/vocabulario/hola.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Liceo', 
-                'descripcion' => 'liceo', 
+                'descripcion' => 'Pon una mano plana frente al pecho con la palma hacia arriba. Con la otra mano haz una "L" y toca suave el medio de la palma con el borde del pulgar.', 
                 'url_img' => 'señas/vocabulario/liceo.gif', 
                 'id_leccion' => 3
             ],
@@ -208,7 +208,7 @@ class VocabularioSeeder extends Seeder
             ],
             [
                 'nombre' => 'Molesto', 
-                'descripcion' => 'molesto', 
+                'descripcion' => 'El canto de la mano abierta toca la barbilla varias veces.', 
                 'url_img' => 'señas/vocabulario/molesto.gif', 
                 'id_leccion' => 3
             ],
@@ -220,7 +220,7 @@ class VocabularioSeeder extends Seeder
             ],
             [
                 'nombre' => 'Pantalón', 
-                'descripcion' => 'pantalón', 
+                'descripcion' => 'Pon las manos a la altura de la cintura, palmas hacia ti, deslízalas hacia abajo por los muslos como poniéndotelos, luego súbelas de nuevo simulando abrocharlos o ajustarlos arriba.', 
                 'url_img' => 'señas/vocabulario/pantalon.gif', 
                 'id_leccion' => 3
             ],
@@ -232,7 +232,7 @@ class VocabularioSeeder extends Seeder
             ],
             [
                 'nombre' => 'Refresco', 
-                'descripcion' => 'refresco', 
+                'descripcion' => "Haz la letra 'R' con el pulgar extendido, llévala hacia la boca como si bebieses, moviendo la mano ligeramente.", 
                 'url_img' => 'señas/vocabulario/refresco.gif', 
                 'id_leccion' => 3
             ],
@@ -244,13 +244,13 @@ class VocabularioSeeder extends Seeder
             ],
             [
                 'nombre' => 'Tensión alta', 
-                'descripcion' => 'tensión alta', 
+                'descripcion' => ' El dedo índice y medio tocan las venas de la muñeca, luego la mano abierta sube indicando altura.', 
                 'url_img' => 'señas/vocabulario/tensionalta.gif', 
                 'id_leccion' => 3
             ],
             [
                 'nombre' => 'Tensión baja', 
-                'descripcion' => 'tensión baja', 
+                'descripcion' => 'El dedo índice y medio tocan las venas de la muñeca, luego la mano abierta baja hacia abajo', 
                 'url_img' => 'señas/vocabulario/tensionbaja.gif', 
                 'id_leccion' => 3
             ],

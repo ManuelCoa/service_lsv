@@ -54,7 +54,7 @@ class ColoresSeeder extends Seeder
             ],
             [
                 'nombre' => 'Negro', 
-                'descripcion' => 'color negro', 
+                'descripcion' => 'Dedos índice y medio de ambas manos se cruzan y tocan ligeramente uno sobre el otro.', 
                 'url_img' => 'señas/colores/negro.gif', 
                 'id_leccion' => 1
             ],

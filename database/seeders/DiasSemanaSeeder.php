@@ -17,7 +17,7 @@ class DiasSemanaSeeder extends Seeder
         Seña::insert([
             [
                 'nombre' => 'Días de la semana', 
-                'descripcion' => 'día lunes', 
+                'descripcion' => "El pulgar y dedo índice tocan la cara entre la sien y el pómulo, seguido de la mano 'A' moviéndose de lado a lado frente al cuerpo.", 
                 'url_img' => 'señas/dias_semana/diasSemana.gif', 
                 'id_leccion' => 1
             ],

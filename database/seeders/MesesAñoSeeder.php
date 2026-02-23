@@ -22,7 +22,7 @@ class MesesAñoSeeder extends Seeder
             ],
             [
                 'nombre' => 'Febrero', 
-                'descripcion' => 'El dedo medio de la mano abiertatoca la frente y se mueve unpoco de un lado a otro.', 
+                'descripcion' => 'El dedo medio de la mano abierta toca la frente y se mueve un poco de un lado a otro.', 
                 'url_img' => 'señas/meses_año/febrero.gif', 
                 'id_leccion' => 1
             ],

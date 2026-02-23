@@ -52,7 +52,7 @@ class NumerosSeeder extends Seeder
             ],
             [
                 'nombre' => '6', 
-                'descripcion' => 'El Pulgar toca el dedo meñique.',
+                'descripcion' => 'El pulgar toca el dedo meñique.',
                 'url_img' => 'señas/numeros/6.gif', 
                 'id_leccion' => 1
             ],
@@ -94,7 +94,7 @@ class NumerosSeeder extends Seeder
             ],
             [
                 'nombre' => '13',
-                'descripcion' => 'Dedos índice, medio y pulgar extendidos, seguido de movimiento del pulgar hacia arriba con oscilación lateral.', 
+                'descripcion' => 'Pulgar hacia arriba con oscilación lateral, seguido de dedos índice, medio y pulgar extendidos.', 
                 'url_img' => 'señas/numeros/13.gif', 
                 'id_leccion' => 1
             ],
@@ -106,31 +106,31 @@ class NumerosSeeder extends Seeder
             ],
             [
                 'nombre' => '15',
-                'descripcion' => 'Mano abierta, seguido de movimiento del pulgar hacia arriba con oscilación lateral.',
+                'descripcion' => 'Pulgar hacia arriba con oscilación lateral, seguido de mano abierta (cinco dedos extendidos).',
                 'url_img' => 'señas/numeros/15.gif', 
                 'id_leccion' => 1
             ],
             [
                 'nombre' => '16',
-                'descripcion' => 'Pulgar toca el dedo meñique, seguido de movimiento del pulgar hacia arriba con oscilación lateral.', 
+                'descripcion' => 'Pulgar hacia arriba con oscilación lateral, seguido de pulgar tocando el dedo meñique.', 
                 'url_img' => 'señas/numeros/16.gif', 
                 'id_leccion' => 1
             ],
             [
                 'nombre' => '17',
-                'descripcion' => 'El pulgar toca el dedo anular, seguido de movimiento del pulgar hacia arriba con oscilación lateral.',
+                'descripcion' => 'Pulgar hacia arriba con oscilación lateral, seguido de pulgar tocando el dedo anular.',
                 'url_img' => 'señas/numeros/17.gif', 
                 'id_leccion' => 1
             ],
             [
                 'nombre' => '18',
-                'descripcion' => 'El pulgar toca el dedo medio, seguido de movimiento del pulgar hacia arriba con oscilación lateral.',
+                'descripcion' => 'Pulgar hacia arriba con oscilación lateral, seguido de pulgar tocando el dedo medio.',
                 'url_img' => 'señas/numeros/18.gif', 
                 'id_leccion' => 1
             ],
             [
                 'nombre' => '19',
-                'descripcion' => 'El pulgar toca el dedo índice, seguido de movimiento del pulgar hacia arriba con oscilación lateral.',
+                'descripcion' => 'Pulgar hacia arriba con oscilación lateral, seguido de pulgar tocando el dedo índice.',
                 'url_img' => 'señas/numeros/19.gif', 
                 'id_leccion' => 1
             ],
