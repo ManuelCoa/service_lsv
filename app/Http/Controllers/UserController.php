@@ -109,40 +109,6 @@ class UserController extends Controller
     }
 
 
-    public function updateProfile(Request $request)
-    {
-        $user = $request->user();
-    
-        $validator = Validator::make($request->all(), [
-        'cedula' => 'sometimes|integer',
-        'name' => 'sometimes|string|max:255',
-        'apellido' => 'sometimes|string|max:255|regex:/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/u',
-        'email' => [
-            'sometimes',
-            'email',
-            'max:255',
-            Rule::unique('users')->ignore($user->id)  
-        ],
-            'password' => 'sometimes|string|min:6',
-        ]);
-
-        if ($validator->fails()) {
-            return response()->json(['status' => 'error', 'message' => $validator->errors()], 400);
-        }
-
-        if ($request->has('password')) {
-            $user->password = Hash::make($request->password);
-        }
-
-        $user->update($request->only(['cedula', 'name', 'apellido', 'email']));
-
-        return response()->json([
-            'status' => 'success',
-            'data' => new UserResource($user),
-            'message' => 'Perfil actualizado correctamente',
-        ], 200);
-    }
-
     public function destroy(User $user)
     {
         $user->delete();

@@ -12,6 +12,7 @@ use App\Http\Controllers\RolePermissionController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\LeccionController;
 use App\Http\Controllers\ProgresoController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Resources\UserResource;
 
 Route::middleware('guest')->group(function () {
@@ -26,10 +27,8 @@ Route::middleware(['auth:api'])->group(function () {
         return $request->user();
     });
 
-    Route::get('profile', function (Request $request) {
-        return new UserResource($request->user());
-    });
-    Route::put('profile', [UserController::class, 'updateProfile']);
+    Route::get('profile', [ProfileController::class, 'show']);
+    Route::put('profile', [ProfileController::class, 'update']);
 
     Route::get('señas', [SeñaController::class, 'index']);
     Route::get('lecciones', [LeccionController::class, 'index']);
