@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RegisterUserRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use App\Http\Resources\UserResource;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Resources\UserResource;
 use Illuminate\Validation\Rule;
 use Spatie\Permission\PermissionRegistrar;
 
@@ -29,21 +30,8 @@ class UserController extends Controller
         ], 200);
     }
 
-    public function store(Request $request)
+    public function store(RegisterUserRequest $request)
     {
-        $validator = Validator::make($request->all(), [
-            'cedula' => 'required|integer',
-            'name' => 'required|string|max:255',
-            'apellido' => 'required|string|max:255|regex:/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/u',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6',
-            'id_rol' => 'sometimes|integer|in:1,2' // 1=admin, 2=estudiante ✅
-        ]);
-
-        if ($validator->fails()) {
-            return response()->json(['status' => 'error', 'message' => $validator->errors()], 400);
-        }
-
         $user = User::create([
             'cedula' => $request->cedula,
             'id_rol' => $request->id_rol ?? 2,
