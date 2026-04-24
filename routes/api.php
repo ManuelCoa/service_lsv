@@ -7,6 +7,7 @@ use App\Http\Controllers\CategoriaSemanticaController;
 use App\Http\Controllers\RelacionSeñaCategoriaController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContentTextController;
+use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RolePermissionController;           
 use App\Http\Controllers\RoleController;
@@ -17,7 +18,17 @@ use App\Http\Resources\UserResource;
 
 Route::middleware('guest')->group(function () {
     Route::post('login', [AuthController::class, 'login']);
-    Route::post('users', [UserController::class, 'store']); 
+    Route::post('users', [UserController::class, 'store']);
+
+    Route::prefix('password')->name('password.')->group(function () {
+        Route::post('code', [ForgotPasswordController::class, 'sendResetLink'])
+            ->name('code')
+            ->middleware('throttle:5,1');
+
+        Route::post('verify', [ForgotPasswordController::class, 'reset'])
+            ->name('verify')
+            ->middleware('throttle:10,1');
+    });
 });
 
 Route::middleware(['auth:api'])->group(function () {
